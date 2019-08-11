@@ -8,6 +8,7 @@ module.exports=(app)=>{
         res.status(200).render("todo",{todos: data});
     });
     app.post("/todo",urlencodedParser,(req,res)=>{
+       
         data.push(req.body);
         res.json(data);
     });
